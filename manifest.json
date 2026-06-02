@@ -1,8 +1,20 @@
 {
   "name": "Select Similar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Select all emails in the current folder matching attributes of a selected email.",
+  "author": "Aidan Ashby",
+  "homepage_url": "https://github.com/aidanashby/select-similar",
   "manifest_version": 3,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "select-similar@aidanashby",
+      "strict_min_version": "128.0"
+    }
+  },
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
   "background": {
     "scripts": ["background.js"]
   },

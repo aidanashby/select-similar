@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Rounded blue background -->
+  <rect width="48" height="48" rx="10" fill="#0060df"/>
+  <!-- Envelope body -->
+  <rect x="7" y="13" width="34" height="21" rx="2" fill="none" stroke="white" stroke-width="2.5"/>
+  <!-- Envelope flap -->
+  <path d="M7 13 L24 25 L41 13" fill="none" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Three dots suggesting multi-select -->
+  <circle cx="17" cy="40" r="2.5" fill="white"/>
+  <circle cx="24" cy="40" r="2.5" fill="white"/>
+  <circle cx="31" cy="40" r="2.5" fill="white"/>
+</svg>
