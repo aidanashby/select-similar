@@ -1,0 +1,20 @@
+{
+  "name": "Select Similar",
+  "version": "1.0.0",
+  "description": "Select all emails in the current folder matching attributes of a selected email.",
+  "manifest_version": 3,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "commands": {
+    "open-select-similar": {
+      "suggested_key": { "default": "Alt+Shift+S" },
+      "description": "Open Select Similar modal"
+    }
+  },
+  "permissions": [
+    "accountsRead",
+    "messagesRead",
+    "storage"
+  ]
+}

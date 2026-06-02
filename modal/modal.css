@@ -1,0 +1,193 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Ensure display:flex on specific elements never overrides the hidden attribute */
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  padding: 14px 16px 12px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  background: #f5f5f5;
+  color: #1a1a1a;
+  width: 100%;
+}
+
+/* ── Error state ─────────────────────────────────────── */
+
+#error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 80px;
+  padding: 20px 24px 8px;
+  text-align: center;
+}
+
+#error-message {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+}
+
+/* ── Criteria table ──────────────────────────────────── */
+
+#criteria-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+#criteria-table tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#criteria-table tr:last-child {
+  border-bottom: none;
+}
+
+#criteria-table td {
+  padding: 6px 4px;
+  vertical-align: middle;
+}
+
+.col-check {
+  width: 24px;
+  text-align: center;
+}
+
+.col-label {
+  width: 170px;
+  padding-left: 4px;
+  color: #333;
+}
+
+.col-value {
+  /* fills remaining width */
+}
+
+/* Modifier row ("Ignore Re:/Fwd:") — slightly muted */
+.row-modifier td {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.row-modifier .col-label {
+  color: #555;
+  font-size: 12px;
+}
+
+/* ── Inputs ──────────────────────────────────────────── */
+
+input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  accent-color: #0060df;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 3px 6px;
+  font-size: 12px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #fff;
+  color: #1a1a1a;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #0060df;
+  box-shadow: 0 0 0 2px rgba(0, 96, 223, 0.2);
+}
+
+input[type="text"][readonly] {
+  background: #ececec;
+  color: #555;
+  cursor: default;
+  border-color: #ddd;
+}
+
+input[type="text"][readonly]:focus {
+  border-color: #ddd;
+  box-shadow: none;
+}
+
+/* ── Loading ─────────────────────────────────────────── */
+
+#loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 8px;
+  padding: 0 2px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ccc;
+  border-top-color: #0060df;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Buttons ─────────────────────────────────────────── */
+
+#button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.1s, opacity 0.1s;
+}
+
+#confirm-btn {
+  background: #0060df;
+  color: #fff;
+  border-color: #0060df;
+}
+
+#confirm-btn:hover:not(:disabled) {
+  background: #003eaa;
+  border-color: #003eaa;
+}
+
+#confirm-btn:disabled {
+  background: #aac4f0;
+  border-color: #aac4f0;
+  cursor: not-allowed;
+}
+
+#cancel-btn {
+  background: #fff;
+  color: #1a1a1a;
+  border-color: #ccc;
+}
+
+#cancel-btn:hover {
+  background: #f0f0f0;
+}

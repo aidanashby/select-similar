@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Similar</title>
+  <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+
+  <div id="error-state" hidden>
+    <p id="error-message"></p>
+  </div>
+
+  <!-- hidden until init() confirms we have a valid non-virtual context -->
+  <div id="criteria-form" hidden>
+    <table id="criteria-table">
+      <tbody>
+        <tr>
+          <td class="col-check"><input type="checkbox" id="chk-subject"></td>
+          <td class="col-label"><label for="chk-subject">Subject (contains)</label></td>
+          <td class="col-value"><input type="text" id="val-subject" autocomplete="off" spellcheck="false"></td>
+        </tr>
+        <tr class="row-modifier">
+          <td class="col-check"><input type="checkbox" id="chk-ignore-prefix"></td>
+          <td class="col-label" colspan="2"><label for="chk-ignore-prefix">Ignore Re: / Fwd: prefixes</label></td>
+        </tr>
+        <tr>
+          <td class="col-check"><input type="checkbox" id="chk-sender-full"></td>
+          <td class="col-label"><label for="chk-sender-full">Sender (full address)</label></td>
+          <td class="col-value"><input type="text" id="val-sender-full" readonly></td>
+        </tr>
+        <tr>
+          <td class="col-check"><input type="checkbox" id="chk-sender-domain"></td>
+          <td class="col-label"><label for="chk-sender-domain">Sender domain only</label></td>
+          <td class="col-value"><input type="text" id="val-sender-domain" readonly></td>
+        </tr>
+        <tr>
+          <td class="col-check"><input type="checkbox" id="chk-recipient"></td>
+          <td class="col-label"><label for="chk-recipient">Recipient (To / CC)</label></td>
+          <td class="col-value"><input type="text" id="val-recipient" readonly></td>
+        </tr>
+        <tr>
+          <td class="col-check"><input type="checkbox" id="chk-attachment"></td>
+          <td class="col-label"><label for="chk-attachment">Has attachment</label></td>
+          <td class="col-value"><input type="text" id="val-attachment" readonly></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div id="loading" hidden>
+      <span class="spinner"></span>
+      <span>Searching&hellip;</span>
+    </div>
+  </div>
+
+  <!-- Button row is outside both state divs; Cancel always closes the window -->
+  <div id="button-row">
+    <button id="confirm-btn" hidden disabled>Select Similar</button>
+    <button id="cancel-btn">Cancel</button>
+  </div>
+
+  <script src="modal.js"></script>
+</body>
+</html>
