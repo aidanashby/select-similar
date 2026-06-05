@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="96" height="96" fill="white"/>
+  <!-- Left curly brace: arms at x=16, spine at x=9, spike at x=7 -->
+  <path d="M16 18 L12 18 C11 18 9 20 9 24 L9 38 C9 41 7.5 42 7 42 C7.5 42 9 43 9 46 L9 60 C9 64 11 66 12 66 L16 66"
+        fill="none" stroke="#6f12e2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right curly brace: arms at x=80, spine at x=87, spike at x=89 -->
+  <path d="M80 18 L84 18 C85 18 87 20 87 24 L87 38 C87 41 88.5 42 89 42 C88.5 42 87 43 87 46 L87 60 C87 64 85 66 84 66 L80 66"
+        fill="none" stroke="#6f12e2" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Back envelope (offset lower-right, dimmed to convey depth) -->
+  <rect x="28" y="30" width="46" height="32" rx="3" fill="none" stroke="#6f12e2" stroke-width="2.5" opacity="0.4"/>
+  <polyline points="28,30 51,44 74,30" fill="none" stroke="#6f12e2" stroke-width="2.5" opacity="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Front envelope (white fill occludes back envelope in overlap zone) -->
+  <rect x="22" y="22" width="46" height="32" rx="3" fill="white" stroke="#6f12e2" stroke-width="3"/>
+  <polyline points="22,22 45,36 68,22" fill="none" stroke="#6f12e2" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>
